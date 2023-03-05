@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  eslintvisitorkeys:
+    image: eslintvisitorkeys
+    build:
+      context: node_modules/eslint-visitor-keys
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+      - 9229:9229
+    command: ["node", "--inspect=0.0.0.0:9229", "dist/eslint-visitor-keys.cjs"]
