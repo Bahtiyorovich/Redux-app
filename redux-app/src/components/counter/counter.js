@@ -1,9 +1,14 @@
+import PlusCount from "../../Buttons/plus"
+import MinusCount from '../../Buttons/minus'
+import ResetCount from "../../Buttons/reset"
+
 const Counter = () => {
+
   return (
     <div className="btn-group">
-        <button className="btn btn-primary">Plus</button>
-        <button className="btn btn-secondary">Minus</button>
-        <button className="btn btn-danger">Reset</button>
+        <PlusCount/>
+        <MinusCount/>
+        <ResetCount/>
     </div>
   )
 }
